@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FerreXpress</title>
+    <link rel="icon" type="image/jpg" href="img/favicon.jpg"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 🔹 Menú -->
+    <nav class="navbar">
+        <div><img src="img/logo.jpg" width="60px" height="60px"></div>
+        <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- 🔹 Home -->
+    <header id="home">
+        <span>Bienvenido a FerreXpress</span>
+        <p>Tu socio confiable en materiales y aventuras</p>
+    </header>
+
+    <!-- 🔹 Sección Nosotros -->
+    <section id="nosotros" class="section">
+        <h2>Nosotros</h2>
+        <p>En <strong>FerreXpress</strong> nos dedicamos a ofrecer, de forma oportuna y confiable, productos y materiales de calidad 
+            para apoyar a empresas, constructoras y clientes particulares.</br></br>Nuestra misión es entregar soluciones prácticas, con un servicio cercano y eficiente, asegurando que siempre encuentres lo que necesitas en el momento adecuado.</p>
+    </section>
+
+    <!-- 🔹 Sección Productos -->
+    <section id="productos" class="products-section">
+        <h2 class="section-title">Productos</h2>
+        <div class="filter">
+            <button onclick="filterProducts('all')">Todos</button>
+            <button onclick="filterProducts('ferreteria')">Ferretería</button>
+            <button onclick="filterProducts('outdoor')">Outdoor</button>
+        </div>
+        <div class="container" id="productos-container"></div>
+    </section>
+
+    <!-- 🔹 Contacto -->
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <p>¿Tienes dudas o quieres más información? Escríbenos por WhatsApp:</p>
+        <a class="buy-btn" href="https://wa.me/56971075720?text=Hola, necesito saber sobre otros productos que no estan en catalogo." target="_blank">
+            📲 Hablar por WhatsApp
+        </a>
+    </section>
+
+    <script src="data/productos.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
