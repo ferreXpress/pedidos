@@ -52,12 +52,12 @@
     <!-- 🔹 Contacto -->
     <section id="contacto" class="section">
         <!-- Formulario de Contacto Corporativo para GitHub Pages -->
-        <form action="https://formsubmit.co/metalmaf.web@gmail.com" method="POST" style="max-width:600px; margin:auto; font-family:Arial, sans-serif; background:#f5f5f5; padding:30px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+        <form id="contactForm" style="max-width:600px; margin:auto; font-family:Arial, sans-serif; background:#f5f5f5; padding:30px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
             <h2 style="text-align:center; color:#0D47A1;">Contáctanos</h2>
-        
+  
             <label for="nombre" style="display:block; margin-top:15px; color:#333;">Nombre</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:5px;">
-
+  
             <label for="email" style="display:block; margin-top:15px; color:#333;">Correo electrónico</label>
             <input type="email" id="email" name="email" placeholder="Tu correo" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:5px;">
 
@@ -67,10 +67,7 @@
             <label for="mensaje" style="display:block; margin-top:15px; color:#333;">Mensaje</label>
             <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:5px;"></textarea>
 
-            <!-- Redirección a página de gracias opcional -->
-            <input type="hidden" name="_next" value="https://ferrexpress.github.io/pedidos/gracias.html">
-
-            <button type="submit" style="margin-top:20px; width:100%; padding:12px; background:#25D366; color:#fff; border:none; border-radius:5px; font-size:16px; cursor:pointer;">Enviar</button>
+            <button type="submit" style="margin-top:20px; width:100%; padding:12px; background:#0D47A1; color:#fff; border:none; border-radius:5px; font-size:16px; cursor:pointer;">Enviar</button>
         </form>
 
         <p>Tienes dudas o prefieres comunicarte en forma directa escríbenos por WhatsApp:</p>
@@ -95,7 +92,7 @@
             e.preventDefault(); // Evita el envío tradicional
             // Envía a Formsubmit
             const formData = new FormData(form);
-            fetch('https://formsubmit.co/tucorreo@dominio.com', {
+            fetch('https://formsubmit.co/metalmaf.web@gmail.com', {
                 method: 'POST',
                 body: formData
             }).then(response => {
