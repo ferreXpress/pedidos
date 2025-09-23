@@ -5,21 +5,21 @@ const productos = [
         nombre: "Pernos",
         descripcion: "Pernos de alta resistencia para construcción y fijaciones seguras",
         imagen: "img/pernos.jpg",
-        categorias: ["ferreteria"],
+        categorias: ["ferreteria", "industrial"],
         whatsapp: whatsappBase + encodeURIComponent("Pernos")
     },
     {
         nombre: "Planchas de acero",
         descripcion: "Planchas de acero para estructuras y trabajos de soldadura",
         imagen: "img/planchas.jpg",
-        categorias: ["ferreteria"],
+        categorias: ["ferreteria", "industrial"],
         whatsapp: whatsappBase + encodeURIComponent("Planchas de acero")
     },
     {
-        nombre: "Mochila Outdoor",
-        descripcion: "Mochila ergonómica de gran capacidad para trekking y camping.",
-        imagen: "img/mochila.jpg",
-        categorias: ["outdoor"],
-        whatsapp: whatsappBase + encodeURIComponent("Mochila Outdoor")
+        nombre: "Perfiles",
+        descripcion: "Perfiles de acero, galvanizados, metalcom",
+        imagen: "img/perfiles.jpg",
+        categorias: ["ferreteria", "industrial"],
+        whatsapp: whatsappBase + encodeURIComponent("Perfiles")
     }
 ];
