@@ -68,7 +68,7 @@
             <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" rows="5" required style="width:100%; padding:10px; margin-top:5px; border:1px solid #ccc; border-radius:5px;"></textarea>
 
             <!-- Redirección a página de gracias opcional -->
-            <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+            <input type="hidden" name="_next" value="https://ferrexpress.github.io/pedidos/gracias.html">
 
             <button type="submit" style="margin-top:20px; width:100%; padding:12px; background:#25D366; color:#fff; border:none; border-radius:5px; font-size:16px; cursor:pointer;">Enviar</button>
         </form>
@@ -78,6 +78,40 @@
             📲 Hablar por WhatsApp
         </a>
     </section>
+    <!-- Popup de Gracias -->
+    <div id="popupGracias" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
+        <div style="background:#fff; padding:30px; border-radius:10px; text-align:center; max-width:400px; box-shadow:0 4px 15px rgba(0,0,0,0.3);">
+            <h2 style="color:#0D47A1;">¡Gracias!</h2>
+            <p>Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.</p>
+            <button onclick="cerrarPopup()" style="margin-top:20px; padding:10px 20px; background:#0D47A1; color:#fff; border:none; border-radius:5px; cursor:pointer;">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const popup = document.getElementById('popupGracias');
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault(); // Evita el envío tradicional
+            // Envía a Formsubmit
+            const formData = new FormData(form);
+            fetch('https://formsubmit.co/tucorreo@dominio.com', {
+                method: 'POST',
+                body: formData
+            }).then(response => {
+                // Muestra el popup
+                popup.style.display = 'flex';
+                form.reset();
+            }).catch(error => {
+                alert('Error al enviar el formulario. Intenta nuevamente.');
+                console.error(error);
+            });
+        });
+
+        function cerrarPopup(){
+            popup.style.display = 'none';
+        }
+    </script>
 
     <script src="data/productos.js"></script>
     <script src="main.js"></script>
